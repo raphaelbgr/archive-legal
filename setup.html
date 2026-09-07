@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archive — Setup &amp; Usage</title><style>
+body{background:#0c0e12;color:#f3f5fa;font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:32px;line-height:1.6}
+main{max-width:760px;margin:0 auto} h1{font-size:26px} h2{font-size:18px;margin-top:28px;color:#30d158} p,li{color:#c8cede;font-size:15px}
+.updated{color:#9aa2b6;font-size:13px} a{color:#30d158} code{background:#171a21;padding:2px 6px;border-radius:4px;font-size:14px}
+ol{color:#c8cede;font-size:15px} .note{border-left:3px solid #30d158;padding-left:14px;color:#9aa2b6;font-size:14px}</style></head><body><main>
+<h1>Archive — Home Video Player · Setup &amp; Usage</h1>
+<p class="updated">Last updated: September 7, 2026</p>
+
+<p>Archive is an Apple TV player for files you already host yourself. You point it at an SMB share on your NAS, PC or Mac and it plays what is there. There is no media server to install, no library to import, no account, and nothing leaves your network.</p>
+
+<h2>What you need</h2>
+<ul>
+<li>An Apple TV running tvOS 17 or later.</li>
+<li>An SMB share on the same network — a NAS, a Windows share, or macOS File Sharing. SMB2 or SMB3; SMB1 is not supported.</li>
+<li>The username and password for that share.</li>
+</ul>
+
+<h2>Nothing to install on the server</h2>
+<p>Archive talks SMB directly to the machine holding the files. There is no Docker image, no compose file and no companion service, because there is no server component to run. If you can already reach the share from a file manager on your laptop, Archive can read it.</p>
+
+<h2>Try it before connecting anything</h2>
+<p>Open the <strong>Network</strong> tab and choose <strong>Demo library</strong>. It plays bundled sample clips so you can see how the player behaves with nothing set up.</p>
+
+<h2>Add your share</h2>
+<ol>
+<li>Open the <strong>Network</strong> tab. Servers found automatically appear under <em>On your network</em>.</li>
+<li>If yours is not listed, choose <strong>Add a server</strong>.</li>
+<li>Under <em>Server</em>, enter the host or IP, for example <code>192.168.1.20</code>.</li>
+<li>Under <em>Account</em>, enter the username and password for the share.</li>
+<li>Choose <strong>Connect</strong>. Archive asks the server which shares it offers and lists them.</li>
+<li>Pick the share you want and confirm its name.</li>
+</ol>
+<p>You do this once. The share is saved on the Apple TV, and the password is stored in the device Keychain only — it is never written to disk in the clear and never synced anywhere.</p>
+
+<h2>Where your files show up</h2>
+<ul>
+<li><strong>Timeline</strong> — everything grouped by month, newest first, with a rail that jumps to any month.</li>
+<li><strong>Folders</strong> — the folder structure of your drive, exactly as it is on disk.</li>
+<li><strong>Favorites</strong> and <strong>History</strong> — what you marked, and what you watched. Longer videos resume where you left off.</li>
+</ul>
+<p>Photos play as a slideshow with a dwell time you choose in Settings, and Archive can play calm background music under media that has no audio of its own.</p>
+
+<h2>Use your phone as the remote</h2>
+<p>The Apple TV serves its own web page, so any browser on the same network becomes a remote and you never type on the TV.</p>
+<ol>
+<li>In the <strong>Network</strong> tab, select the <strong>Web server online</strong> button.</li>
+<li>Scan the QR code shown, or type the address it displays — it is <code>http://&lt;your-apple-tv-ip&gt;:8570/app</code>.</li>
+<li>Browse, search, and start playback from the phone. The video plays on the TV.</li>
+</ol>
+<p>To lock the page, go to <strong>Settings → Network → Set PIN</strong>. The PIN itself never travels over the network; the browser sends only a hash of it, and the page remembers it so you enter it once per device.</p>
+
+<h2>If a share will not connect</h2>
+<p>Each saved share shows its own status. What each one means:</p>
+<ul>
+<li><strong>Online</strong> — reachable and signed in. Nothing to do.</li>
+<li><strong>Sign-in failed</strong> — the server answered but rejected the account. Check the username and password, and whether the account is allowed on that specific share.</li>
+<li><strong>Unreachable</strong> — nothing answered at that address. Check the host or IP, that the machine is awake, that file sharing is switched on, and that TCP port 445 is not blocked by a firewall.</li>
+</ul>
+<p>To measure a share, press and hold the select button on its row and choose <strong>Test speed</strong>. It reads the largest video it knows about and reports average, minimum and current throughput in MB/s. The same menu removes a share.</p>
+
+<h2>A note on very large files</h2>
+<p>Archive is built for high-bitrate footage — drone flights and camera originals at 100 Mbit/s and above — and it plays those by downloading to the Apple TV while you watch, then handing the running player onto the local copy without a restart.</p>
+<p class="note">It cannot raise the Apple TV's hardware decoder ceiling. A file encoded beyond what the device can decode will not play smoothly on any app, and Archive tells you that plainly rather than showing you a black screen.</p>
+
+<p style="margin-top:34px"><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+</main></body></html>
