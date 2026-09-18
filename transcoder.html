@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archive — Transcoder downloads</title>
+<meta name="description" content="Download the Archive Transcoder for Windows, macOS or Linux. It runs on a computer on your own network and streams heavy video to the Archive app on your TV.">
+<style>
+body{background:#0c0e12;color:#f3f5fa;font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:32px;line-height:1.6}
+main{max-width:760px;margin:0 auto}
+h1{font-size:26px;margin:0 0 4px}
+h2{font-size:18px;margin-top:32px;color:#30d158}
+p,li{color:#c8cede;font-size:15px}
+a{color:#30d158}
+code{background:#171a21;padding:2px 6px;border-radius:4px;font-size:14px}
+.updated{color:#9aa2b6;font-size:13px}
+.lead{margin:0 0 8px}
+.note{border-left:3px solid #30d158;padding-left:14px;color:#9aa2b6;font-size:14px}
+
+/* One card per operating system. Grid rather than flex so the three stay the
+   same width on a desktop and stack cleanly on a phone. */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin:20px 0 8px}
+.card{background:#12151c;border:1px solid #1e232e;border-radius:12px;padding:18px}
+.card h3{margin:0;font-size:16px;color:#f3f5fa;display:flex;align-items:center;gap:10px}
+/* The glyphs are pure white on purpose: three different brand colours in a row
+   reads as clutter, and white sits evenly on this background. */
+.card h3 svg{width:22px;height:22px;fill:#fff;flex:none}
+.card .req{color:#9aa2b6;font-size:13px;margin:8px 0 14px}
+.dl{display:inline-block;background:#30d158;color:#08130c;font-weight:600;font-size:14px;
+    padding:9px 16px;border-radius:8px;text-decoration:none}
+.dl:hover{background:#3ae066}
+.card .run{color:#9aa2b6;font-size:13px;margin:12px 0 0}
+.file{display:block;color:#6f7789;font-size:12px;margin-top:10px;word-break:break-all}
+</style></head><body><main>
+
+<h1>Archive Transcoder</h1>
+<p class="lead">Version 1.0.3</p>
+<p>Archive plays straight off your drive and needs nothing installed. The Transcoder is the
+exception you only want for the heavy files — 4K, HEVC, high-bitrate drone footage — that a
+television cannot decode smoothly on its own. It runs on a computer you already have, on your
+own network, and hands the TV a stream it can play.</p>
+
+<p class="note">It never talks to the internet and nothing is uploaded anywhere. The computer
+running it and the TV watching it have to be on the same network, and that is the whole
+arrangement.</p>
+
+<h2>Download</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.6l7.4-1v7.1H3V5.6zm0 12.8l7.4 1v-7h-7.4v6zM11.6 4.4L21 3.1v8.6h-9.4V4.4zm0 15.2L21 20.9v-8.5h-9.4v7.2z"/></svg>
+      Windows
+    </h3>
+    <p class="req">Windows 10 or 11, 64-bit</p>
+    <a class="dl" href="https://github.com/raphaelbgr/archive-legal/releases/download/transcoder-v1.0.3/ArchiveTranscoder-windows-x64.exe">Download .exe</a>
+    <p class="run">Double-click it. SmartScreen may ask once — choose <strong>More info</strong> ›
+    <strong>Run anyway</strong> — and click <strong>Allow</strong> on the firewall prompt, or the
+    TV will not be able to reach it.</p>
+    <span class="file">ArchiveTranscoder-windows-x64.exe</span>
+  </div>
+
+  <div class="card">
+    <h3>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 1.4c0 1.1-.4 2.2-1.1 3-.8.9-2.1 1.6-3.1 1.5-.1-1.1.4-2.3 1.1-3 .8-.8 2.1-1.5 3.1-1.5zm4.5 15.7c-.5 1.3-.8 1.8-1.5 3-1 1.6-2.4 3.5-4.1 3.5-1.5 0-1.9-1-4-1s-2.5 1-4 1c-1.7 0-3-1.8-4-3.3C.4 16.4 0 11.3 1.7 8.6c1.2-1.9 3.1-3 4.9-3 1.8 0 3 1 4.5 1 1.4 0 2.3-1 4.4-1 1.6 0 3.3.9 4.5 2.4-3.9 2.2-3.3 7.8 1.9 9.1z"/></svg>
+      macOS
+    </h3>
+    <p class="req">macOS 12 or newer, Apple Silicon (M1 and up)</p>
+    <a class="dl" href="https://github.com/raphaelbgr/archive-legal/releases/download/transcoder-v1.0.3/ArchiveTranscoder-macos-arm64.zip">Download .zip</a>
+    <p class="run">Unzip it, then <strong>right-click</strong> Archive Transcoder and choose
+    <strong>Open</strong> the first time. The app is not notarized, so a plain double-click is
+    refused.</p>
+    <span class="file">ArchiveTranscoder-macos-arm64.zip</span>
+  </div>
+
+  <div class="card">
+    <h3>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-2.2 0-3.6 1.7-3.6 3.9 0 1 .2 1.7.2 2.4 0 .9-.6 1.7-1.3 2.7C6.3 12.4 5 14.2 5 16.3c0 1.1.5 1.8 1.2 2.2-.2.5-.3 1-.1 1.4.3.6 1 .9 2 1 1.2.2 2.4-.1 2.9-.6.4.1.8.1 1.2.1s.8 0 1.2-.1c.5.5 1.7.8 2.9.6 1-.1 1.7-.4 2-1 .2-.4.1-.9-.1-1.4.7-.4 1.2-1.1 1.2-2.2 0-2.1-1.3-3.9-2.3-5.3-.7-1-1.3-1.8-1.3-2.7 0-.7.2-1.4.2-2.4C15.6 3.7 14.2 2 12 2zm-1.6 3.6c.4 0 .8.5.8 1.1 0 .6-.4 1-.8 1s-.7-.4-.7-1 .3-1.1.7-1.1zm3.2 0c.4 0 .7.5.7 1.1 0 .6-.3 1-.7 1s-.8-.4-.8-1c0-.6.4-1.1.8-1.1zM12 8.3c.8 0 1.7.4 1.7.8 0 .4-.9.9-1.7.9s-1.7-.5-1.7-.9c0-.4.9-.8 1.7-.8z"/></svg>
+      Linux
+    </h3>
+    <p class="req">64-bit, glibc 2.39+ (Ubuntu 24.04 or newer)</p>
+    <a class="dl" href="https://github.com/raphaelbgr/archive-legal/releases/download/transcoder-v1.0.3/ArchiveTranscoder-linux-x64.tar.gz">Download .tar.gz</a>
+    <p class="run">Extract it, then run <code>./ArchiveTranscoder</code> from a terminal, or
+    double-click it in your file manager.</p>
+    <span class="file">ArchiveTranscoder-linux-x64.tar.gz</span>
+  </div>
+
+</div>
+
+<p class="updated">Checksums:
+<a href="https://github.com/raphaelbgr/archive-legal/releases/download/transcoder-v1.0.3/SHA256SUMS.txt">SHA256SUMS.txt</a> ·
+all three builds and their release notes are on the
+<a href="https://github.com/raphaelbgr/archive-legal/releases/tag/transcoder-v1.0.3">release page</a>.</p>
+
+<h2>After it is running</h2>
+<ol>
+<li>Open the app. It shows this computer's address and a six-digit pairing code.</li>
+<li>Add the folders holding your photos and videos, or map your NAS shares in <code>config.json</code>.</li>
+<li>On the TV: <strong>Archive › Settings › Playback › Stream server › Pair…</strong>, then type
+the address and the code.</li>
+</ol>
+<p>That is the whole setup. The TV finds it from then on, and a transcoder icon appears in the
+top bar whenever it is reachable.</p>
+
+<h2>About ffmpeg</h2>
+<p>ffmpeg is not bundled — it is 120 MB and licensed separately. The first launch that cannot
+find one downloads it for you, from BtbN on Windows and Linux and from evermeet on macOS. If
+you already have ffmpeg on your <code>PATH</code>, it uses that instead and downloads nothing.</p>
+
+<h2>If the TV cannot see it</h2>
+<ul>
+<li>Both machines have to be on the same network. A guest SSID is a different network.</li>
+<li>On Windows, a firewall prompt that was dismissed writes a block rule for that exact file. Allow
+it, or remove the rule and launch again.</li>
+<li>The app's own window says whether it is serving and on which address — start there rather than
+from the TV.</li>
+</ul>
+
+<p class="updated"><a href="index.html">← Archive</a> · <a href="setup.html">Setup &amp; Usage</a> ·
+<a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+
+</main></body></html>
