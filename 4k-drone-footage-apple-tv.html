@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Large 4K Drone Footage on Apple TV | Archive</title>
+  <meta name="description" content="Why high-bitrate 4K drone video can stutter on Apple TV, how Archive downloads ahead while playing, and when the TV's hardware decoder remains the limit.">
+  <link rel="canonical" href="https://raphaelbgr.github.io/archive-legal/4k-drone-footage-apple-tv.html">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Playing large 4K drone files on Apple TV">
+  <meta property="og:description" content="Understand network buffering and decoder limits before playing camera originals from a local share.">
+  <meta property="og:url" content="https://raphaelbgr.github.io/archive-legal/4k-drone-footage-apple-tv.html">
+  <meta property="og:image" content="https://raphaelbgr.github.io/archive-legal/press/archive-6tv-mosaic.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header class="site-header wrap"><a class="brand" href="./" aria-label="Archive home">archive<span>.</span></a><nav aria-label="Main navigation"><a href="./">Home</a><a href="setup.html">Setup</a><a href="press/">Demo</a></nav></header>
+  <main>
+    <header class="article-header wrap"><p class="eyebrow">4K camera footage</p><h1>What makes big drone files stutter on Apple TV?</h1><p class="lead">A large camera original puts pressure on two different parts of playback: getting data across the network and decoding each frame on the TV. Finding which one is failing matters.</p></header>
+    <article class="article wrap">
+      <h2>Network stalls and decoder limits look similar</h2>
+      <p>If the network delivery pauses or varies, the player can run out of buffered video even when the share is generally fast. If the Apple TV cannot decode the file's format or bitrate, a faster network will not solve it. Both cases can look like frozen playback.</p>
+      <h2>What Archive does with large files</h2>
+      <p>Archive starts playback from your SMB share and downloads ahead to the Apple TV while you watch. When enough data is local, it can hand playback to that copy. This reduces dependence on a small streaming buffer; it does not re-encode the source or increase the device's decoding ability.</p>
+      <div class="callout"><h3>A useful limit to know</h3><p>No app can promise direct playback of every 4K file on every Apple TV. Codec, frame rate, bitrate and device model all matter. For a file the TV cannot decode directly, Archive also offers an <a href="transcoder.html">optional local Transcoder</a> that runs on a computer on your network.</p></div>
+      <h2>Try your own footage</h2>
+      <ol><li>Make the file available through an SMB share on a NAS, Mac or PC.</li><li>Connect the share in Archive and open the file on the Apple TV.</li><li>If playback struggles, check whether the issue is network delivery or device decoding before changing the source file.</li></ol>
+      <p>The app includes a demo library, but only a test with your actual file and Apple TV can establish how that combination behaves. See the <a href="smb-player-apple-tv.html">SMB connection guide</a> for setup.</p>
+      <a class="button" href="https://apps.apple.com/us/app/archive-home-video-player/id6781049173">Try Archive on Apple TV</a>
+      <p class="small">Free download with in-app purchases. An SMB share is required for your own files.</p>
+      <p class="article-links">Also useful: <a href="nas-video-library-apple-tv.html">organizing a NAS library</a> | <a href="press/">watch the demo</a></p>
+    </article>
+  </main>
+  <footer class="site-footer wrap"><span>Archive for Apple TV</span><nav aria-label="Footer navigation"><a href="./">Home</a><a href="setup.html">Setup</a><a href="press/">Press &amp; demo</a><a href="privacy.html">Privacy</a></nav></footer>
+</body>
+</html>

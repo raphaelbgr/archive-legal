@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Play an SMB Share on Apple TV | Archive</title>
+  <meta name="description" content="Connect an SMB share on a NAS, Mac or Windows PC to Apple TV with Archive. See the requirements, setup steps, and what to check if your share is missing.">
+  <link rel="canonical" href="https://raphaelbgr.github.io/archive-legal/smb-player-apple-tv.html">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to play an SMB share on Apple TV">
+  <meta property="og:description" content="Connect your NAS, Mac or Windows SMB share and play your own files on Apple TV.">
+  <meta property="og:url" content="https://raphaelbgr.github.io/archive-legal/smb-player-apple-tv.html">
+  <meta property="og:image" content="https://raphaelbgr.github.io/archive-legal/press/archive-6tv-mosaic.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header class="site-header wrap"><a class="brand" href="./" aria-label="Archive home">archive<span>.</span></a><nav aria-label="Main navigation"><a href="./">Home</a><a href="setup.html">Full setup guide</a><a href="press/">Demo</a></nav></header>
+  <main>
+    <header class="article-header wrap"><p class="eyebrow">SMB on Apple TV</p><h1>Play files from a network share on Apple TV.</h1><p class="lead">If your videos already live on a NAS, Mac or Windows PC, you can open the share directly on your TV. Archive uses SMB, the file-sharing protocol those devices commonly provide.</p></header>
+    <article class="article wrap">
+      <h2>What you need</h2>
+      <ul><li>An Apple TV running tvOS 17 or later.</li><li>An SMB2 or SMB3 share reachable on the same local network.</li><li>A username and password allowed to read that share.</li></ul>
+      <p>Archive reads files from the share you choose. You do not need to install a separate media server or upload your library. If you have not set up SMB on the computer or NAS yet, enable file sharing there first.</p>
+      <h2>Connect in Archive</h2>
+      <ol><li>Open Archive's Network tab and look under <strong>On your network</strong>.</li><li>Select a detected server, or choose <strong>Add a server</strong> and enter its local address.</li><li>Enter the share account, choose <strong>Connect</strong>, and select the share containing your media.</li><li>Open <strong>Folders</strong> to follow the directory structure, or <strong>Timeline</strong> to browse by date.</li></ol>
+      <p>You can try the bundled demo library first if you want to see the player before connecting a share. For screen-by-screen instructions, see the <a href="setup.html">setup guide</a>.</p>
+      <h2>If the server does not appear</h2>
+      <p>Discovery is convenient but not required: enter the server's local IP address manually. If it still cannot connect, confirm that the server is awake, SMB file sharing is enabled, the TV is on the same network, and the firewall allows SMB traffic. A sign-in error means the server answered but rejected the account or share permission.</p>
+      <div class="callout"><h3>For large video files</h3><p>Archive downloads ahead during playback to reduce stalls caused by a short network buffer. The Apple TV still has to support the file's codec and bitrate. Read the <a href="4k-drone-footage-apple-tv.html">4K footage guide</a> if a file remains difficult to play.</p></div>
+      <a class="button" href="https://apps.apple.com/us/app/archive-home-video-player/id6781049173">Get Archive on the App Store</a>
+      <p class="small">Free download with in-app purchases. The demo library works without an SMB share; your own files require one.</p>
+      <p class="article-links">Also useful: <a href="nas-video-library-apple-tv.html">browsing a NAS library</a> | <a href="privacy.html">privacy</a></p>
+    </article>
+  </main>
+  <footer class="site-footer wrap"><span>Archive for Apple TV</span><nav aria-label="Footer navigation"><a href="./">Home</a><a href="setup.html">Setup</a><a href="press/">Press &amp; demo</a><a href="privacy.html">Privacy</a></nav></footer>
+</body>
+</html>
